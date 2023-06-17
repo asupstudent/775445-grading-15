@@ -45,6 +45,7 @@ export function processStyles () {
       csso()
     ]))
     .pipe(gulp.dest('build/css', { sourcemaps: isDevelopment }))
+    .pipe(gulp.dest('source/css', { sourcemaps: isDevelopment })) // Добавил ругается WebStorm на отсутствие файла style.css
     .pipe(browser.stream());
 }
 
