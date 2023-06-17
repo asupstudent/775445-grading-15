@@ -15,12 +15,20 @@ import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
+import htmlmin from 'gulp-htmlmin';
 
 const sass = gulpSass(dartSass);
 let isDevelopment = true;
 
 export function processMarkup () {
   return gulp.src('source/*.html')
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      ignoreCustomFragments: [ /<br class="breaker breaker--off-on">\s/gi,
+        /<br class="breaker breaker--on-off">\s/gi,
+        /<br class="breaker breaker--on-on">\s/gi,
+        /<br class="breaker breaker--off-off">\s/gi ]
+    }))
     .pipe(gulp.dest('build'));
 }
 
@@ -45,7 +53,7 @@ export function processStyles () {
       csso()
     ]))
     .pipe(gulp.dest('build/css', { sourcemaps: isDevelopment }))
-    .pipe(gulp.dest('source/css', { sourcemaps: isDevelopment })) // Добавил ругается WebStorm на отсутствие файла style.css
+    .pipe(gulp.dest('source/css', { sourcemaps: isDevelopment }))
     .pipe(browser.stream());
 }
 
@@ -63,7 +71,7 @@ export function optimizeImages () {
 }
 
 export function createWebp () {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicons/**/*.png'])
     .pipe(squoosh({
       webp: {}
     }))

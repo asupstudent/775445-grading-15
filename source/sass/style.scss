@@ -2,6 +2,11 @@
 @import "global/variables";
 @import "global/global";
 @import "global/fonts";
+@import "global/visually-hidden";
+
+/* MIXINS */
+@import "mixins/normalize-list.scss";
 
 /* BLOCKS */
+@import "blocks/page";
 @import "blocks/header";
