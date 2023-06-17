@@ -16,3 +16,8 @@
   color: $color-black-base;
   background-color: $color-white-base;
 }
+
+.page__header {
+  display: flex;
+  justify-content: space-between;
+}

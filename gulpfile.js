@@ -10,12 +10,13 @@ import csso from 'postcss-csso';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import { stacksvg } from "gulp-stacksvg";
+import svgstore from 'gulp-svgstore';
 import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
 import htmlmin from 'gulp-htmlmin';
+import rename from 'gulp-rename';
 
 const sass = gulpSass(dartSass);
 let isDevelopment = true;
@@ -79,16 +80,19 @@ export function createWebp () {
 }
 
 export function optimizeVector () {
-  return gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*.svg'])
+  return gulp.src(['source/img/**/*.svg', '!source/img/icons/sprite/**/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
 
-export function createStack () {
-  return gulp.src('source/img/icons/**/*.svg')
+const sprite = () => {
+  return gulp.src('source/img/icons/sprite/*.svg')
     .pipe(svgo())
-    .pipe(stacksvg())
-    .pipe(gulp.dest('build/img/icons'));
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
 }
 
 export function copyAssets () {
@@ -131,9 +135,9 @@ function compileProject (done) {
     processStyles,
     processScripts,
     optimizeVector,
-    createStack,
     copyAssets,
     optimizeImages,
+    sprite,
     createWebp
   )(done);
 }
