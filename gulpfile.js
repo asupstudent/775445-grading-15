@@ -77,6 +77,7 @@ export function createWebp () {
       webp: {}
     }))
     .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('source/img'))
 }
 
 export function optimizeVector () {
