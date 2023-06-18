@@ -7,6 +7,7 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -58,8 +59,8 @@
       </nav>
       <section class="page__slider main-slider">
         <h2 class="visually-hidden">Промо слайдер интернет магазина Drink2Go</h2>
-        <div class="main-slider__container swiper-container">
-          <ul class="main-slider__wrapper swiper-wrapper">
+        <div class="main-slider__swiper swiper">
+          <ul class="main-slider__swiper-wrapper swiper-wrapper">
             <li class="mail-slider__item main-slider__item--flat-white swiper-slide">
               <div class="main-slider__content">
                 <h3 class="main-slider__title title">Декаф Флэт Уайт</h3>
@@ -142,11 +143,15 @@
               </div>
             </li>
           </ul>
+          <button class="main-slider__button-prev swiper-button-prev" type="button"></button>
+          <button class="main-slider__button-next swiper-button-next" type="button"></button>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
     </header>
     <main class="page__main"></main>
     <footer class="page__footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/script.js" defer></script>
   </body>
 </html>
