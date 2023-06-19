@@ -109,6 +109,25 @@
   }
 }
 
+.main-slider__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 0;
+    margin-left: 21px;
+    margin-top: 18px;
+  }
+}
+
 .main-slider__image {
   @media (min-width: $tablet-width) {
     width: 476px;
