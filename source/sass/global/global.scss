@@ -32,3 +32,47 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.breaker {
+  display: block;
+
+  &--on-on {
+    @media (min-width: $tablet-width) {
+      display: inline;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: inline;
+    }
+  }
+
+  &--on-off {
+    @media (min-width: $tablet-width) {
+      display: inline;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--off-on {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: inline;
+    }
+  }
+
+  &--off-off {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
