@@ -6,4 +6,8 @@
   text-transform: uppercase;
   color: $color-base_primary;
   margin: 0 0 4px 0;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 6px;
+  }
 }

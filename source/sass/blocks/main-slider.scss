@@ -14,6 +14,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: $desktop-width;
+    max-height: 714px;
   }
 
   &--nojs {
@@ -25,6 +26,7 @@
 
 .main-slider__item {
   padding-top: 20px;
+  padding-bottom: 60px;
   min-height: 635px;
 
   @media (min-width: $tablet-width) {
@@ -38,14 +40,26 @@
 
   &--flat-white {
     background-color: $color-flat_white;
+
+    @media (min-width: $tablet-width) and (max-width: $only-tablet-width) {
+      background-image: linear-gradient(180deg, $color-flat_white 0, $color-flat_white 72%, $color-white-base 72%);
+    }
   }
 
   &--latte {
     background-color: $color-lavender_latte;
+
+    @media (min-width: $tablet-width) and (max-width: $only-tablet-width) {
+      background-image: linear-gradient(180deg, $color-lavender_latte 0, $color-lavender_latte 72%, $color-white-base 72%);
+    }
   }
 
   &--espresso {
     background-color: $color-espresso;
+
+    @media (min-width: $tablet-width) and (max-width: $only-tablet-width) {
+      background-image: linear-gradient(180deg, $color-espresso 0, $color-espresso 72%, $color-white-base 72%);
+    }
   }
 }
 
@@ -61,7 +75,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 32px;
-    padding: 16px 0 20px;
+    padding: 16px 0 21px;
     max-width: $tablet-width;
   }
 
@@ -123,8 +137,8 @@
     align-items: flex-start;
     justify-content: center;
     padding-bottom: 0;
-    margin-left: 21px;
-    margin-top: 18px;
+    margin-left: 13px;
+    margin-top: -8px;
   }
 }
 
@@ -136,7 +150,7 @@
   @media (min-width: $desktop-width) {
     width: 600px;
     height: 600px;
-    margin: 29px 0 0 21px;
+    margin: 5px 0 0 13px;
   }
 }
 
@@ -152,17 +166,21 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  top: 0;
+  top: 22px;
   z-index: 10;
 
   @media (min-width: $tablet-width) {
     width: 80px;
+    top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 22px;
   }
 
   &::after {
     content: "";
     position: absolute;
-
     min-width: 12px;
     min-height: 12px;
     border-top: 2px solid $color-base_primary;
@@ -176,11 +194,11 @@
 
   &:hover,
   &:focus {
-    background: linear-gradient(90deg, $color-white-base 0, rgba($color-white-base, $alpha: 0) 100%);
+    background: linear-gradient(90deg, $color-white-base 0, rgba(255, 255, 255, 0) 100%);
   }
 
   &:active {
-    background: linear-gradient(90deg, rgba($color-base_primary, $alpha: 0.25), rgba($color-base_primary, $alpha: 0) 100%);
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
   }
 
   &:disabled {
@@ -217,9 +235,9 @@
 }
 
 .swiper-horizontal > .swiper-pagination-bullets {
-  bottom: 65px;
+  bottom: 66px;
 
-  @media (max-width: $desktop-width) {
+  @media (max-width: $desktop-width - 1) {
     display: none;
   }
 }

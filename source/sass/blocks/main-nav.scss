@@ -17,6 +17,8 @@
 }
 
 .main-nav__logo {
+  margin-top: 3px;
+
   @media (min-width: $tablet-width) {
     order: 0;
     display: flex;
