@@ -1,0 +1,26 @@
+.button {
+  display: inline-block;
+  font-family: $font-family-montserrat-regular;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 4px;
+  color: $color-white-base;
+  background-color: $color-base-primary;
+  cursor: pointer;
+
+  &:not(.slider__button--disabled):hover,
+  &:not(.slider__button--disabled):focus {
+    background-color: $color-primary-lighter;
+  }
+
+  &:not(.slider__button--disabled):active {
+    background-color: $color-primary-darker;
+  }
+
+  &--disabled {
+    background-color: $color-base-grey;
+    cursor: not-allowed;
+  }
+}

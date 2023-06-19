@@ -17,7 +17,9 @@
   </head>
   <body class="page__body">
   <header class="main-header">
-    <!-- main-nav--opened | main-nav--closed | main-nav--nojs -->
+<!--    main-nav--opened-->
+<!--    main-nav--closed-->
+<!--    main-nav--nojs-->
     <nav class="main-nav main-nav--closed">
       <div class="main-nav__wrapper">
         <a class="main-nav__logo" tabindex="0">
@@ -68,11 +70,12 @@
     <section class="main-slider">
       <h2 class="visually-hidden">Промо слайдер интернет магазина Drink2Go</h2>
       <div class="main-slider__swiper swiper">
-        <ul class="main-slider__swiper-wrapper swiper-wrapper">
+<!--        main-slider__swiper-list--nojs-->
+        <ul class="main-slider__swiper-list swiper-wrapper">
           <li class="main-slider__item main-slider__item--flat-white swiper-slide">
             <div class="main-slider__content">
-              <h3 class="main-slider__title title">Декаф Флэт Уайт</h3>
-              <picture class="main-slider__picture">
+
+              <picture>
                 <source type="image/webp" media="(min-width: 1440px)"
                         srcset="img/slider/desktop/can_of_flat_white.webp 1x, img/slider/desktop/can_of_flat_white@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)"
@@ -85,21 +88,22 @@
                      srcset="img/slider/mobile/can_of_flat_white@2x.png 2x" width="280" height="280"
                      alt="Кофе Декаф Флэт Уайт.">
               </picture>
-<!--              <span class="main-slider__badge badge">Новинка!</span>-->
-<!--              <p class="main-slider__text">-->
-<!--                Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня-->
-<!--              </p>-->
-<!--              <div class="main-slider__order">-->
-<!--                <span class="main-slider__price price price&#45;&#45;old-price">295&#8381;</span>-->
-<!--                <span class="main-slider__price price">225&#8381;</span>-->
-<!--                <a href="#" class="main-slider__button button">Заказать</a>-->
-<!--              </div>-->
+              <h3 class="main-slider__title title">Декаф Флэт Уайт</h3>
+              <span class="main-slider__badge badge">Новинка!</span>
+              <p class="main-slider__text">
+                Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+              </p>
+              <div class="main-slider__order order">
+                <span class="order__price price price--old-price">295&#8381;</span>
+                <span class="order__price price">225&#8381;</span>
+                <a href="#" class="order__button button">Заказать</a>
+              </div>
             </div>
           </li>
           <li class="main-slider__item main-slider__item--lavender swiper-slide">
             <div class="main-slider__content">
               <h3 class="main-slider__title title">Лавандовый Латте</h3>
-              <picture class="main-slider__picture">
+              <picture>
                 <source type="image/webp" media="(min-width: 1440px)"
                         srcset="img/slider/desktop/can_of_lavender.webp 1x, img/slider/desktop/can_of_lavender@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)"
@@ -112,21 +116,21 @@
                      srcset="img/slider/mobile/can_of_lavender@2x.png 2x" width="280" height="280"
                      alt="Кофе Лавандовый Латте.">
               </picture>
-<!--              <span class="main-slider__badge badge">Новинка!</span>-->
-<!--              <p class="main-slider__text">-->
-<!--                Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор-->
-<!--              </p>-->
-<!--              <div class="main-slider__order">-->
-<!--                <span class="main-slider__price price price&#45;&#45;old-price">285&#8381;</span>-->
-<!--                <span class="main-slider__price price">265&#8381;</span>-->
-<!--                <a href="#" class="main-slider__button button">Заказать</a>-->
-<!--              </div>-->
+              <span class="main-slider__badge badge">Новинка!</span>
+              <p class="main-slider__text">
+                Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+              </p>
+              <div class="main-slider__order order">
+                <span class="order__price price price--old-price">285&#8381;</span>
+                <span class="order__price price">265&#8381;</span>
+                <a href="#" class="order__button button">Заказать</a>
+              </div>
             </div>
           </li>
           <li class="main-slider__item main-slider__item--espresso swiper-slide">
             <div class="main-slider__content">
               <h3 class="main-slider__title title">Тройной Эспрессо</h3>
-              <picture class="main-slider__picture">
+              <picture>
                 <source type="image/webp" media="(min-width: 1440px)"
                         srcset="img/slider/desktop/can_of_espresso.webp 1x, img/slider/desktop/can_of_espresso@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)"
@@ -139,15 +143,15 @@
                      srcset="img/slider/mobile/can_of_espresso@2x.png 2x" width="280" height="280"
                      alt="Кофе Тройной Эспрессо.">
               </picture>
-<!--              <span class="main-slider__badge badge">Новинка!</span>-->
-<!--              <p class="main-slider__text">-->
-<!--                Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость-->
-<!--              </p>-->
-<!--              <div class="main-slider__order">-->
-<!--                <span class="main-slider__price price price&#45;&#45;old-price">395&#8381;</span>-->
-<!--                <span class="main-slider__price price">375&#8381;</span>-->
-<!--                <a href="#" class="main-slider__button button">Заказать</a>-->
-<!--              </div>-->
+              <span class="main-slider__badge badge">Новинка!</span>
+              <p class="main-slider__text">
+                Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+              </p>
+              <div class="main-slider__order order">
+                <span class="order__price price price--old-price">395&#8381;</span>
+                <span class="order__price price">375&#8381;</span>
+                <a href="#" class="order__button button">Заказать</a>
+              </div>
             </div>
           </li>
         </ul>
@@ -159,9 +163,9 @@
   </header>
   <main class="page__main">
 
-    </main>
-    <footer class="page__footer"></footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./js/script.js" defer></script>
+  </main>
+  <footer class="page__footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./js/script.js" defer></script>
   </body>
 </html>
