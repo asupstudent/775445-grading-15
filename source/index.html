@@ -198,6 +198,45 @@
         </ul>
       </div>
     </section>
+    <section class="catalog">
+      <span class="catalog__badge badge">Каталог</span>
+      <h2 class="catalog__title title">Каталог кофейных напитков</h2>
+      <div class="catalog__wrapper">
+        <form class="catalog__form form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form__wrapper">
+            <fieldset class="from__group">
+              <legend class="form__title title">Цена</legend>
+              <div class="form__range range">
+                <div class="range__scale">
+                  <div class="range__bar">
+                    <button class="range__toggle range__toggle--min" tabindex="0" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range__toggle range__toggle--max" tabindex="0" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
+                <ul class="range__inputs-list">
+                  <li class="range__inputs-item">
+                    <label>
+                      <input type="number" class="range__field range__field--min" value="0" name="range-field-min">
+                    </label>
+                    <span class="visually-hidden">Минимальная цена.</span>
+                  </li>
+                  <li class="range__inputs-item">
+                    <label>
+                      <input type="number" class="range__field range__field--max" value="900" name="range-field-max">
+                    </label>
+                    <span class="visually-hidden">Максимальная цена.</span>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
   <footer class="page__footer"></footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
