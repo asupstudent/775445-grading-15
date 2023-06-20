@@ -26,7 +26,7 @@
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop.svg" width="170" height="36">
             <source media="(min-width: 768px)" srcset="img/logo/logo_tablet.svg" width="82" height="36">
-            <img class="logo__image" src="img/logo/logo-mobile.svg" alt="Логотип «Drink2Go»." width="32" height="36">
+            <img class="main-nav__logo-image" src="img/logo/logo-mobile.svg" alt="Логотип «Drink2Go»." width="32" height="36">
           </picture>
         </a>
         <p class="main-nav__slogan">Интернет-магазин кофейных напитков</p>
@@ -204,7 +204,7 @@
       <div class="catalog__wrapper">
         <form class="catalog__form form" action="https://echo.htmlacademy.ru" method="post">
           <div class="form__wrapper">
-            <fieldset class="from__group">
+            <fieldset class="form__group">
               <legend class="form__title title">Цена</legend>
               <div class="form__range range">
                 <div class="range__scale">
@@ -217,14 +217,14 @@
                     </button>
                   </div>
                 </div>
-                <ul class="range__inputs-list">
-                  <li class="range__inputs-item">
+                <ul class="range__input-list">
+                  <li class="range__input-item">
                     <label>
                       <input type="number" class="range__field range__field--min" value="0" name="range-field-min">
                     </label>
                     <span class="visually-hidden">Минимальная цена.</span>
                   </li>
-                  <li class="range__inputs-item">
+                  <li class="range__input-item">
                     <label>
                       <input type="number" class="range__field range__field--max" value="900" name="range-field-max">
                     </label>
@@ -293,6 +293,69 @@
             </ul>
           </div>
         </form>
+        <div class="catalog__sort sort">
+            <div class="sort__wrapper">
+              <p class="sort__title">Сортировка: </p>
+              <button class="sort__select" type="button">По умолчанию</button>
+              <ul class="sort__list">
+                <li class="sort__item">
+                  <a class="sort__link sort__link--active" href="#">По умолчанию</a>
+                </li>
+                <li class="sort__item">
+                  <a class="sort__link" href="#">Сначала дорогие</a>
+                </li>
+                <li class="sort__item">
+                  <a class="sort__link" href="#">Сначала дешёвые</a>
+                </li>
+                <li class="sort__item">
+                  <a class="sort__link" href="#">Высокий рейтинг</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <article class="catalog__card card">
+              <a class="card__link card__link--title" href="#">
+                <h3 class="card__title title">Декаф Флэт Уайт</h3>
+              </a>
+              <a class="card__link card__link--picture" href="#">
+                <picture class="card__picture">
+                  <source type="image/webp" srcset="img/catalog/coffee-1.webp 1x, img/catalog/coffee-1@2x.webp 2x">
+                  <img class="card__image" src="img/catalog/coffee-1.png"
+                       srcset="img/catalog/coffee-1@2x.png 2x" alt="Кофе без кофенина Декаф Флэт Уайт." width="130"
+                       height="188">
+                </picture>
+              </a>
+              <p class="card__description">
+                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+              </p>
+              <div class="card__buy">
+                <span class="card__price price">225₽</span>
+                <button class="card__button card__button--buy button">В корзину</button>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <div class="catalog__pagination pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item pagination__item--prev">
+              <a class="pagination__link button" href="#" aria-label="Предыдущая страница"></a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link button" href="#">1</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link button pagination__link--current">2</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link button" href="#">3</a>
+            </li>
+            <li class="pagination__item pagination__item--next">
+              <a class="pagination__link button" href="#" aria-label="Следующая страница"></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
