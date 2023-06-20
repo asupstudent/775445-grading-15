@@ -4,10 +4,10 @@
   padding: 0;
   display: grid;
   grid-template-columns: 280px;
-  row-gap: 50px;
+  justify-content: center;
+  row-gap: 0;
 
   @media (min-width: $tablet-width) {
-    //display: grid;
     grid-template-columns: repeat(2, 339px);
     column-gap: 30px;
     row-gap: 50px;
@@ -45,6 +45,7 @@
   &::before {
     content: "";
     position: absolute;
+    top: -2px;
     background-repeat: no-repeat;
   }
 
@@ -53,6 +54,7 @@
       background-image: url("../../img/icons/features/speed.svg");
       width: 50px;
       height: 56px;
+      left: 115px;
 
       @media (min-width: $tablet-width) {
         top: 3px;
@@ -71,6 +73,7 @@
       background-image: url("../../img/icons/features/comfort.svg");
       width: 52px;
       height: 56px;
+      left: 114px;
 
       @media (min-width: $tablet-width) {
         top: -1px;
@@ -89,6 +92,7 @@
       background-image: url("../../img/icons/features/energy.svg");
       width: 42px;
       height: 56px;
+      left: 119px;
 
       @media (min-width: $tablet-width) {
         top: -1px;
@@ -107,6 +111,7 @@
       background-image: url("../../img/icons/features/eco.svg");
       width: 46px;
       height: 56px;
+      left: 117px;
 
       @media (min-width: $tablet-width) {
         top: 3px;
@@ -135,4 +140,11 @@
 
 .features-list__description {
   margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
