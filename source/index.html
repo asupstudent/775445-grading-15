@@ -233,6 +233,29 @@
                 </ul>
               </div>
             </fieldset>
+            <fieldset class="form__group">
+              <legend class="form__title title">Наличие молока</legend>
+              <ul class="form__radio-list">
+                <li class="form__radio-item">
+                  <input class="visually-hidden" type="radio" name="availability-milk" id="milk-no-matter"
+                         value="no-matter" checked>
+                  <label class="form__label form__radio-label" for="milk-no-matter">Неважно</label>
+                </li>
+                <li class="form__radio-item">
+                  <input class="visually-hidden" type="radio" name="availability-milk" id="milk-animal" value="amimal">
+                  <label class="form__label form__radio-label" for="milk-animal">Только животное</label>
+                </li>
+                <li class="form__radio-item">
+                  <input class="visually-hidden" type="radio" name="availability-milk" id="milk-plant" value="plant">
+                  <label class="form__label form__radio-label" for="milk-plant">Только растительное</label>
+                </li>
+                <li class="form__radio-item">
+                  <input class="visually-hidden" type="radio" name="availability-milk" id="milk-none" value="none"
+                         disabled>
+                  <label class="form__label form__radio-label" for="milk-none">Без молока</label>
+                </li>
+              </ul>
+            </fieldset>
           </div>
         </form>
       </div>
