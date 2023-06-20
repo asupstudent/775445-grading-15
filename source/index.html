@@ -235,7 +235,7 @@
             </fieldset>
             <fieldset class="form__group">
               <legend class="form__title title">Наличие молока</legend>
-              <ul class="form__radio-list">
+              <ul class="form__input-list">
                 <li class="form__radio-item">
                   <input class="visually-hidden" type="radio" name="availability-milk" id="milk-no-matter"
                          value="no-matter" checked>
@@ -253,6 +253,31 @@
                   <input class="visually-hidden" type="radio" name="availability-milk" id="milk-none" value="none"
                          disabled>
                   <label class="form__label form__radio-label" for="milk-none">Без молока</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__group">
+              <legend class="form__title title">Страна произрастания</legend>
+              <ul class="form__input-list">
+                <li class="form__checkbox-item">
+                  <input class="visually-hidden" type="checkbox" name="brazil" id="country-brazil" checked>
+                  <label class="form__label form__checkbox-label" for="country-brazil">Бразилия</label>
+                </li>
+                <li class="form__checkbox-item">
+                  <input class="visually-hidden" type="checkbox" name="ethiopia" id="country-ethiopia">
+                  <label class="form__label form__checkbox-label" for="country-ethiopia">Эфиопия</label>
+                </li>
+                <li class="form__checkbox-item">
+                  <input class="visually-hidden" type="checkbox" name="columbia" id="country-columbia">
+                  <label class="form__label form__checkbox-label" for="country-columbia">Колумбия</label>
+                </li>
+                <li class="form__checkbox-item">
+                  <input class="visually-hidden" type="checkbox" name="costa-rika" id="country-costa-rika">
+                  <label class="form__label form__checkbox-label" for="country-costa-rika">Коста-Рика</label>
+                </li>
+                <li class="form__checkbox-item">
+                  <input class="visually-hidden" type="checkbox" name="peru" id="country-peru" disabled>
+                  <label class="form__label form__checkbox-label" for="country-peru">Перу</label>
                 </li>
               </ul>
             </fieldset>
