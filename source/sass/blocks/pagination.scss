@@ -1,0 +1,125 @@
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0 0;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    padding-top: 72px;
+    margin: 0 0 0 auto;
+    width: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+  }
+}
+
+.pagination-list__item {
+  display: flex;
+  align-items: center;
+  font-family: $font-family-montserrat-regular;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-base-primary;
+  background-color: $color-white-base;
+  text-decoration: none;
+  border-radius: 4px;
+  list-style: none;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+
+  &--current {
+    font-family: $font-family-montserrat-semi-bold;
+    background-color: $color-lightest-grey;
+    color: $color-black-base;
+  }
+}
+
+.pagination-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-lighter;
+    color: $color-white-base;
+  }
+
+  &:active {
+    background-color: $color-primary-darker;
+  }
+
+  &--disabled {
+    background-color: $color-light-grey;
+    color: $color-white-base;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-light-grey;
+      color: $color-white-base;
+      cursor: not-allowed;
+    }
+  }
+
+  &--prev {
+    @media (min-width: $tablet-width) {
+      padding: 5px 20px;
+    }
+  }
+
+  &--next {
+    @media (min-width: $tablet-width) {
+      padding: 5px 20px;
+    }
+  }
+
+  &--current {
+    cursor: auto;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+      color: $color-black-base;
+      cursor: auto;
+    }
+  }
+}
+
+.pagination-list__link-icon {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}
+
+.pagination-list__link span {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}

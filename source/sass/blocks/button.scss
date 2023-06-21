@@ -9,6 +9,7 @@
   color: $color-white-base;
   background-color: $color-base-primary;
   cursor: pointer;
+  text-align: center;
 
   &:not(.slider__button--disabled):hover,
   &:not(.slider__button--disabled):focus {
