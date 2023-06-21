@@ -71,6 +71,7 @@
   margin: 0;
   padding: 10px 20px 20px;
   max-width: $mobile-width;
+  letter-spacing: -0.1px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;

@@ -3,14 +3,30 @@
   flex-direction: column;
   align-items: center;
   background-color: $color-lightest-grey;
-  padding-top: 51px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 79px;
+    padding-top: 80px;
+    padding-bottom: 90px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 104px;
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+
+.catalog__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalog__sort {
+  @media (min-width: $desktop-width) {
+    padding-top: 37px;
+    padding-bottom: 25px;
   }
 }
 
@@ -63,8 +79,8 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(3, minmax(min-content, 317px));
-    gap: 30px;
-    margin-bottom: 60px;
+    gap: 31px;
+    margin-bottom: 0;
   }
 }
 
@@ -78,4 +94,8 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.catalog__title {
+  text-align: center;
 }
