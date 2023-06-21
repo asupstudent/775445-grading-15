@@ -297,22 +297,15 @@
           <div class="catalog__goods">
             <div class="catalog__sort sort">
               <div class="sort__wrapper">
-                <p class="sort__title">Сортировка: </p>
-                <button class="sort__select" type="button">По умолчанию</button>
-                <ul class="sort__list">
-                  <li class="sort__item">
-                    <a class="sort__link sort__link--active" href="#">По умолчанию</a>
-                  </li>
-                  <li class="sort__item">
-                    <a class="sort__link" href="#">Сначала дорогие</a>
-                  </li>
-                  <li class="sort__item">
-                    <a class="sort__link" href="#">Сначала дешёвые</a>
-                  </li>
-                  <li class="sort__item">
-                    <a class="sort__link" href="#">Высокий рейтинг</a>
-                  </li>
-                </ul>
+                <label class="sort__text" for="sorting-values">Сортировка:</label>
+                <div class="sort__select">
+                  <select class="sort__values" name="sorting-values" id="sorting-values">
+                    <option class="sort__control" value="default">по умолчанию</option>
+                    <option class="sort__control" value="expensive">сначала дорогие</option>
+                    <option class="sort__control" value="cheap">сначала дешёвые</option>
+                    <option class="sort__control" value="high-rating">высокий рейтинг</option>
+                  </select>
+                </div>
               </div>
             </div>
             <ul class="catalog__list">
