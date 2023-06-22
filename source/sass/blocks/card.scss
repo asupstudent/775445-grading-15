@@ -50,10 +50,10 @@
 
 .card__description {
   margin: 0 0 16px 0;
+  font-size: 14px;
+  line-height: 20px;
 
   @media (min-width: $tablet-width) {
-    font-size: 14px;
-    line-height: 20px;
     margin-bottom: 20px;
   }
 }

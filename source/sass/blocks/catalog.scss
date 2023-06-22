@@ -4,7 +4,7 @@
   align-items: center;
   background-color: $color-lightest-grey;
   padding-top: 45px;
-  padding-bottom: 45px;
+  padding-bottom: 43px;
 
   @media (min-width: $tablet-width) {
     padding-top: 80px;
@@ -97,7 +97,7 @@
 }
 
 .catalog__item {
-  margin-bottom: 21px;
+  margin-bottom: 19px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;

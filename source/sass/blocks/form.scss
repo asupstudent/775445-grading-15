@@ -1,20 +1,25 @@
 .form {
-  padding-bottom: 40px;
+  padding-bottom: 36px;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
     padding-bottom: 43px;
   }
 }
 
 .form__wrapper {
-  padding-bottom: 7px;
+  padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
     display: grid;
     justify-content: center;
     grid-template-columns: 225px 1fr 1fr;
     gap: 22px;
-    margin-bottom: 7px;
+    margin-bottom: 2px;
+    padding-bottom: 7px;
   }
 
   @media (min-width: $desktop-width) {
@@ -35,11 +40,21 @@
 
   &--range {
     padding-bottom: 27px;
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 2px;
+    }
   }
 
   &--range .form__title {
     @media (min-width: $tablet-width) {
       margin-left: 0;
+    }
+  }
+
+  &--checkbox .form__title {
+    @media (min-width: $desktop-width) {
+      padding-top: 2px;
     }
   }
 }
@@ -56,6 +71,10 @@
     margin-left: 6px;
     padding: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .form__input-list {
@@ -65,6 +84,10 @@
 
   @media (min-width: $tablet-width) {
     padding-left: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
   }
 }
 
@@ -78,10 +101,6 @@
 
 .form__checkbox-item {
   margin-bottom: 20px;
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 19px;
-  }
 
   &:last-child {
     margin-bottom: 0;
@@ -258,5 +277,69 @@
 .form__checkbox-item input[type="checkbox"]:disabled:checked + .form__checkbox-label {
   &::after {
     background-color: $color-base-grey;
+  }
+}
+
+.form__submit-wrapper {
+  text-align: center;
+}
+
+.form__submit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+    margin-top: 33px;
+  }
+}
+
+.form__submit-item {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__button {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px;
+  min-width: 280px;
+
+  &--reset {
+    background-color: $color-white-base;
+    color: $color-base-primary;
+
+    &:hover,
+    &:focus {
+      background-color: $color-light-grey;
+      color: $color-white-base;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 137px;
+    padding: 8px 3px;
+
+    &--reset {
+      min-width: 120px;
+      margin-left: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 149px;
   }
 }

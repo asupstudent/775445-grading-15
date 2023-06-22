@@ -11,7 +11,8 @@
     margin-bottom: 12px;
   }
 
-  &--tel {
+  &--phone {
+    margin-top: 16px;
     margin-bottom: 9px;
   }
 }
@@ -35,11 +36,12 @@
   }
 
   &--address,
-  &--tel {
+  &--phone {
     position: relative;
     display: block;
     padding-left: 19px;
     text-transform: none;
+    font-family: $font-family-montserrat-regular;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0;
@@ -63,7 +65,7 @@
     }
   }
 
-  &--tel {
+  &--phone {
     &::before {
       background-image: url("../../img/icons/phone.svg");
     }
