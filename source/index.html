@@ -210,30 +210,21 @@
               <fieldset class="form__group">
                 <legend class="form__title title">Цена</legend>
                 <div class="form__range range">
-                  <div class="range__scale">
-                    <div class="range__bar">
-                      <button class="range__toggle range__toggle--min" tabindex="0" type="button">
-                        <span class="visually-hidden">Изменить минимальную цену.</span>
-                      </button>
-                      <button class="range__toggle range__toggle--max" tabindex="0" type="button">
-                        <span class="visually-hidden">Изменить максимальную цену.</span>
-                      </button>
+                  <div class="range__controls">
+                    <div class="range__scale">
+                      <div class="range__bar"></div>
                     </div>
+                    <div class="range__toggle range__toggle--min" tabindex="0"></div>
+                    <div class="range__toggle range__toggle--max" tabindex="0"></div>
                   </div>
-                  <ul class="range__input-list">
-                    <li class="range__input-item">
-                      <label>
-                        <input type="number" class="range__field range__field--min" value="0" name="range-field-min">
-                      </label>
-                      <span class="visually-hidden">Минимальная цена.</span>
-                    </li>
-                    <li class="range__input-item">
-                      <label>
-                        <input type="number" class="range__field range__field--max" value="900" name="range-field-max">
-                      </label>
-                      <span class="visually-hidden">Максимальная цена.</span>
-                    </li>
-                  </ul>
+                  <div class="range__price-wrapper">
+                    <label class="visually-hidden" for="price-min">от</label>
+                    <input class="range__price range__price--min-price" id="price-min" type="number"
+                           name="min-price" placeholder="0">
+                    <label class="visually-hidden" for="price-max">до</label>
+                    <input class="range__price range__price--max-price" id="price-max" type="number"
+                           name="max-price" value="123">
+                  </div>
                 </div>
               </fieldset>
               <fieldset class="form__group">

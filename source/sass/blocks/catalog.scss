@@ -23,6 +23,18 @@
   align-items: center;
 }
 
+.catalog__form {
+  padding-top: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 41px;
+  }
+}
+
 .catalog__sort {
   @media (min-width: $desktop-width) {
     padding-top: 37px;
