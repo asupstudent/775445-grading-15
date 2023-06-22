@@ -1,8 +1,14 @@
-@media (min-width: $desktop-width) {
-  .main-footer {
+.main-footer {
+  width: $mobile-width;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1440px;
     margin: 0 auto;
     padding-top: 40px;
   }
