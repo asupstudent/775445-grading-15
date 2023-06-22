@@ -485,7 +485,108 @@
       </div>
     </section>
   </main>
-  <footer class="page__footer"></footer>
+  <footer class="main-footer">
+    <section class="main-footer__social footer-social">
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <a class="footer-social__logo" tabindex="0">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo/logo_desktop.svg">
+          <img class="footer-social__logo-image" src="img/logo/logo_tablet.svg" alt="Логотип «Drink2Go»." width="82" height="36">
+        </picture>
+        <span class="footer-social__text">Интернет-магазин кофейных напитков</span>
+      </a>
+      <ul class="footer-social__list">
+        <li class="footer-social__item">
+          <a class="footer-social__link" href="https://vk.com/htmlacademy" target="_blank">
+            <span class="visually-hidden">Перейти в группу Вконтакте HTMLAcademy.</span>
+            <svg class="footer-social__icon footer-social__icon--vk" width="20" height="20" role="img" aria-label="vk"
+                 focusable="false">
+              <use xlink:href="img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-social__item">
+          <a class="footer-social__link" href="https://pin.it/345KAJF" target="_blank">
+            <span class="visually-hidden">Перейти в Pinterest.</span>
+            <svg class="footer-social__icon footer-social__icon--pinterest" width="22" height="22" role="img"
+                 aria-label="pinterest" focusable="false">
+              <use xlink:href="img/sprite.svg#pinterest"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-social__item">
+          <a class="footer-social__link" href="https://m.ok.ru/group/55557024251912" target="_blank">
+            <span class="visually-hidden">Перейти в группу в Одноклассниках.</span>
+            <svg class="footer-social__icon footer-social__icon--ok" width="20" height="20" role="img" aria-label="ok"
+                 focusable="false">
+              <use xlink:href="img/sprite.svg#ok"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <nav class="main-footer__footer-navigation footer-navigation">
+      <ul class="footer-navigation__list">
+        <li class="footer-navigation__item">
+          <h4 class="footer-navigation__title title">Интернет-магазин</h4>
+          <ul class="footer-navigation__footer-link-list footer-link-list">
+            <li class="footer-link-list__item">
+              <a class="footer-link-list__link" href="#">Каталог</a>
+            </li>
+            <li class="footer-link-list__item">
+              <a class="footer-link-list__link" href="#">Доставка</a>
+            </li>
+            <li class="footer-link-list__item">
+              <a class="footer-link-list__link" href="#">Способы оплаты</a>
+            </li>
+            <li class="footer-link-list__item">
+              <a class="footer-link-list__link" href="#">О нас</a>
+            </li>
+          </ul>
+        </li>
+        <li class="footer-navigation__item">
+          <h4 class="footer-navigation__title title">Медиа</h4>
+          <ul class="footer-navigation__footer-link-list footer-link-list">
+            <li class="footer-link-list__item">
+              <a class="footer-link-list__link" href="#">Блог</a>
+            </li>
+            <li class="footer-link-list__item">
+              <a class="footer-link-list__link" href="#">Информация для сми</a>
+            </li>
+            <li class="footer-link-list__item">
+              <a class="footer-link-list__link" href="#">Правовая информация</a>
+            </li>
+          </ul>
+        </li>
+        <li class="footer-navigation__item">
+          <h4 class="footer-navigation__title title">Контакты</h4>
+          <address class="footer-navigation__address">
+            <ul class="footer-navigation__footer-link-list footer-link-list">
+              <li class="footer-link-list__item">
+                <a class="footer-link-list__link footer-link-list__link--address" href="https://yandex.ru/profile/24933578998" target="_blank">
+                  Санкт-Петербург, набережная реки Карповки, дом 5
+                </a>
+              </li>
+              <li class="footer-link-list__item footer-link-list__item--phone">
+                <a class="footer-link-list__link footer-link-list__link--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+              </li>
+            </ul>
+          </address>
+        </li>
+      </ul>
+    </nav>
+    <div class="main-footer__footer-developers footer-developers">
+      <p class="footer-developers__copyright">
+        Разработано в
+        <a class="footer-developers__link" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <svg class="footer-developers__icon" width="12" height="16" role="img" aria-label="Логотип HTML Academy" focusable="false">
+            <use xlink:href="img/sprite.svg#academy_logo"></use>
+          </svg>
+        </a>
+      </p>
+    </div>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./js/script.js" defer></script>
   </body>
