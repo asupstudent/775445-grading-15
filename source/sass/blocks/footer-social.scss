@@ -4,10 +4,9 @@
   justify-content: space-between;
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 500px; //ВРЕМЕННО
 
   @media (min-width: $tablet-width) {
-    padding-top: 33px;
+    padding-top: 30px;
     padding-bottom: 13px;
   }
 
@@ -40,6 +39,7 @@
 .footer-social__logo-image {
   width: 82px;
   height: 36px;
+  margin-top: 6px;
 
   @media (min-width: $tablet-width) {
     width: 170px;
@@ -51,7 +51,10 @@
 }
 
 .footer-social__text {
+  display: none;
+
   @media (min-width: $desktop-width) {
+    display: block;
     margin-top: 1px;
     letter-spacing: -0.05px;
   }
