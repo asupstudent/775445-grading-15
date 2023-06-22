@@ -13,7 +13,11 @@
   user-select: none;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 22px;
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 21px;
   }
 }
 
@@ -29,7 +33,7 @@
   background-color: $color-primary-lighter;
 
   @media (min-width: $tablet-width) {
-    width: 86%;
+    width: 84%;
   }
 }
 
@@ -47,17 +51,25 @@
 
   &--min {
     left: 3px;
+
+    @media (min-width: $tablet-width) {
+      left: -7px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 0;
+    }
   }
 
   &--max {
     left: 85.5%;
 
     @media (min-width: $tablet-width) {
-      left: 80%;
+      left: 79.1%;
     }
 
     @media (min-width: $desktop-width) {
-      left: 86%;
+      left: 86.3%;
     }
   }
 
@@ -116,6 +128,11 @@
 
   @media (min-width: $tablet-width) {
     column-gap: 33px;
+    margin-left: -10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
   }
 
   &::after {
@@ -127,6 +144,10 @@
     width: 8px;
     height: 2px;
     background-color: $color-base-grey;
+
+    @media (min-width: $desktop-width) {
+      left: 50%;
+    }
   }
 }
 
@@ -142,11 +163,11 @@
   font-size: 16px;
 
   @media (min-width: $tablet-width) {
-    width: 69px;
+    width: 87px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 109px;
+    width: 134px;
   }
 
   &:focus {
@@ -162,9 +183,21 @@
 
   &--min-price {
     margin-left: 3px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: 0;
+    }
   }
 
   &--max-price {
     margin-right: -3px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 0;
+    }
   }
 }
