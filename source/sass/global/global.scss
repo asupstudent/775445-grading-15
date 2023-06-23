@@ -20,10 +20,14 @@ a {
   box-sizing: border-box;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.range__price-wrapper input::-webkit-outer-spin-button,
+.range__price-wrapper input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.range__price-wrapper input[type="number"] {
+  appearance: textfield;
 }
 
 .visually-hidden {

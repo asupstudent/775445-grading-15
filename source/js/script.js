@@ -3,6 +3,7 @@ const navToggle = document.querySelector('.main-nav__toggle');
 const mainSlider = document.querySelector('.main-slider__swiper-list');
 
 //МЕНЮ
+
 const mobileMenu = () => {
   navMain.classList.remove('main-nav--nojs');
 
@@ -16,11 +17,6 @@ const mobileMenu = () => {
     }
   });
 };
-
-if( window.screen.width <= 768 && navMain.classList.contains('main-nav--closed')) {
-  navMain.classList.remove('main-nav--closed');
-  navMain.classList.add('main-nav--opened');
-}
 
 mobileMenu();
 
