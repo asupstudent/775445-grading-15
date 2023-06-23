@@ -322,8 +322,13 @@
     background-color: $color-white-base;
     color: $color-base-primary;
 
-    &:hover,
-    &:focus {
+    &:focus,
+    &:hover {
+      color: $color-white-base;
+      background-color: $color-primary-lighter;
+    }
+
+    &:disabled {
       background-color: $color-light-grey;
       color: $color-white-base;
     }
