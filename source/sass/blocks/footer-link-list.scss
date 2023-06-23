@@ -5,11 +5,7 @@
 }
 
 .footer-link-list__item {
-  margin-bottom: 16px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 12px;
-  }
+  margin-bottom: 12px;
 
   &--phone {
     margin-top: 16px;
