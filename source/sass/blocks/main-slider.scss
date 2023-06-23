@@ -18,9 +18,15 @@
   }
 
   &--nojs {
-    display: flex;
-    flex-direction: column;
     max-width: 100vw;
+
+    & ~ .main-slider__button-next {
+      display: none;
+    }
+
+    & ~ .main-slider__button-prev {
+      display: none;
+    }
   }
 }
 

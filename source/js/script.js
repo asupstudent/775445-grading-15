@@ -1,5 +1,8 @@
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
+const mainSlider = document.querySelector('.main-slider__swiper-list');
+
+//МЕНЮ
 const mobileMenu = () => {
   navMain.classList.remove('main-nav--nojs');
 
@@ -21,6 +24,12 @@ if( window.screen.width <= 768 && navMain.classList.contains('main-nav--closed')
 
 mobileMenu();
 
+//СЛАЙДЕР
+
+if(mainSlider.classList.contains('main-slider__swiper-list--nojs')) {
+  mainSlider.classList.remove('main-slider__swiper-list--nojs');
+}
+
 const swiper = new Swiper('.swiper', {
   loop: true,
 
@@ -34,4 +43,3 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
   }
 });
-
