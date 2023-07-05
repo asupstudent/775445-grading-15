@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "@htmlacademy/editorconfig-cli": "^2.0.4",
     "autoprefixer": "10.4.13",
     "browser-sync": "2.27.10",
     "del": "7.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-htmlacademy": "^9.1.1",
     "gulp": "4.0.2",
     "gulp-html-bemlinter": "2.1.2",
     "gulp-if": "3.0.0",
@@ -24,8 +26,8 @@
     "postcss-scss": "4.0.5",
     "postcss-url": "10.1.3",
     "sass": "1.56.1",
-    "stylelint": "14.15.0",
-    "stylelint-config-htmlacademy": "1.1.2"
+    "stylelint": "15.9.0",
+    "stylelint-config-htmlacademy": "1.1.5"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -35,7 +37,8 @@
     "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
     "start": "gulp runDev",
     "build": "gulp buildProd",
-    "preview": "gulp buildProd && gulp startServer"
+    "preview": "gulp buildProd && gulp startServer",
+    "eslint": "eslint source/js/"
   },
   "browserslist": [
     "last 2 versions",
