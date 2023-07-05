@@ -21,6 +21,7 @@
     "gulp-svgstore": "^9.0.0",
     "gulp-terser": "2.1.0",
     "gulp-w3c-html-validator": "5.1.3",
+    "linthtml-config-htmlacademy": "^1.0.6",
     "postcss": "8.4.19",
     "postcss-csso": "6.0.1",
     "postcss-scss": "4.0.5",
@@ -38,7 +39,8 @@
     "start": "gulp runDev",
     "build": "gulp buildProd",
     "preview": "gulp buildProd && gulp startServer",
-    "eslint": "eslint source/js/"
+    "eslint": "eslint source/js/",
+    "linthtml": "linthtml /index.html"
   },
   "browserslist": [
     "last 2 versions",

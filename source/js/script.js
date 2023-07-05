@@ -7,7 +7,7 @@ const mainSlider = document.querySelector('.main-slider__swiper-list');
 const mobileMenu = () => {
   navMain.classList.remove('main-nav--nojs');
 
-  navToggle.addEventListener('click', function() {
+  navToggle.addEventListener('click', () => {
     if (navMain.classList.contains('main-nav--closed')) {
       navMain.classList.remove('main-nav--closed');
       navMain.classList.add('main-nav--opened');
@@ -26,6 +26,7 @@ if(mainSlider.classList.contains('main-slider__swiper-list--nojs')) {
   mainSlider.classList.remove('main-slider__swiper-list--nojs');
 }
 
+// eslint-disable-next-line no-unused-vars
 const swiper = new Swiper('.swiper', {
   loop: true,
 

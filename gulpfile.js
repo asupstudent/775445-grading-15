@@ -1,8 +1,8 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import gulpIf from 'gulp-if';
-import dartSass from "sass";
-import gulpSass from "gulp-sass";
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
@@ -14,7 +14,7 @@ import svgstore from 'gulp-svgstore';
 import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
-import { htmlValidator } from "gulp-w3c-html-validator";
+import { htmlValidator } from 'gulp-w3c-html-validator';
 import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 
@@ -40,8 +40,8 @@ export function lintBem () {
 
 export function validateMarkup () {
   return gulp.src('source/*.html')
-		.pipe(htmlValidator.analyzer())
-		.pipe(htmlValidator.reporter({ throwErrors: true }));
+    .pipe(htmlValidator.analyzer())
+    .pipe(htmlValidator.reporter({ throwErrors: true }));
 }
 
 export function processStyles () {
@@ -68,7 +68,7 @@ export function processScripts () {
 export function optimizeImages () {
   return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(gulpIf(!isDevelopment, squoosh()))
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/img'));
 }
 
 export function createWebp () {
@@ -77,7 +77,7 @@ export function createWebp () {
       webp: {}
     }))
     .pipe(gulp.dest('build/img'))
-    .pipe(gulp.dest('source/img'))
+    .pipe(gulp.dest('source/img'));
 }
 
 export function optimizeVector () {
@@ -86,15 +86,13 @@ export function optimizeVector () {
     .pipe(gulp.dest('build/img'));
 }
 
-const sprite = () => {
-  return gulp.src('source/img/icons/sprite/*.svg')
-    .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
-}
+const sprite = () => gulp.src('source/img/icons/sprite/*.svg')
+  .pipe(svgo())
+  .pipe(svgstore({
+    inlineSvg: true
+  }))
+  .pipe(rename('sprite.svg'))
+  .pipe(gulp.dest('build/img'));
 
 export function copyAssets () {
   return gulp.src([
