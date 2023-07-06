@@ -1,4 +1,5 @@
 {
+  "homepage": "https://asupstudent.github.io/775445-grading-15/",
   "name": "htmlacademy-gulp-template",
   "version": "1.0.0",
   "private": true,
@@ -40,7 +41,9 @@
     "build": "gulp buildProd",
     "preview": "gulp buildProd && gulp startServer",
     "eslint": "eslint source/js/",
-    "linthtml": "linthtml /index.html"
+    "linthtml": "linthtml /index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",
