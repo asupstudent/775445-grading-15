@@ -86,13 +86,15 @@ export function optimizeVector () {
     .pipe(gulp.dest('build/img'));
 }
 
-const sprite = () => gulp.src('source/img/icons/sprite/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
+export function createSprite () {
+  return gulp.src('source/img/icons/sprite/*.svg')
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
 
 export function copyAssets () {
   return gulp.src([
@@ -136,7 +138,7 @@ function compileProject (done) {
     optimizeVector,
     copyAssets,
     optimizeImages,
-    sprite,
+    createSprite,
     createWebp
   )(done);
 }
