@@ -1,7 +1,7 @@
 Status of Last Check:<br>
-<img src="https://github.com/asupstudent/775445-grading-15/workflows/project-check/badge.svg?branch=master"><br>
+<img src="https://github.com/asupstudent/775445-grading-15/workflows/project-check/badge.svg?branch=main"><br>
 Status of Last Deployment:<br>
-<img src="https://github.com/asupstudent/775445-grading-15/workflows/deploy-to-gitHub-pages/badge.svg?branch=master"><br>
+<img src="https://github.com/asupstudent/775445-grading-15/workflows/deploy-to-github-pages/badge.svg?branch=main"><br>
 # Краткая инструкция по работе
 
 1. [Установить node.js](https://nodejs.org/download/release/latest-v16.x/). Сборка работает на 16 версии
